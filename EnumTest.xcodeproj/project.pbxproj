@@ -26,18 +26,11 @@
 		CB0EDA271C884A9600B2A871 /* EnumTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EnumTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0EDA2A1C884A9600B2A871 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CB0EDA321C884B9700B2A871 /* EnumTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EnumTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		CB0EDA3C1C88503500B2A871 /* EnumTest_UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnumTest_UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB0EDA441C88B82800B2A871 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB0EDA241C884A9600B2A871 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB0EDA391C88503500B2A871 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +43,7 @@
 		CB0EDA1E1C884A9600B2A871 = {
 			isa = PBXGroup;
 			children = (
+				CB0EDA441C88B82800B2A871 /* README.md */,
 				CB0EDA291C884A9600B2A871 /* EnumTest */,
 				CB0EDA281C884A9600B2A871 /* Products */,
 			);
@@ -59,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				CB0EDA271C884A9600B2A871 /* EnumTest */,
-				CB0EDA3C1C88503500B2A871 /* EnumTest_UnitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,23 +86,6 @@
 			productReference = CB0EDA271C884A9600B2A871 /* EnumTest */;
 			productType = "com.apple.product-type.tool";
 		};
-		CB0EDA3B1C88503500B2A871 /* EnumTest_UnitTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB0EDA411C88503500B2A871 /* Build configuration list for PBXNativeTarget "EnumTest_UnitTest" */;
-			buildPhases = (
-				CB0EDA381C88503500B2A871 /* Sources */,
-				CB0EDA391C88503500B2A871 /* Frameworks */,
-				CB0EDA3A1C88503500B2A871 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EnumTest_UnitTest;
-			productName = EnumTest_UnitTest;
-			productReference = CB0EDA3C1C88503500B2A871 /* EnumTest_UnitTest.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -121,9 +97,6 @@
 				ORGANIZATIONNAME = "Alexander von Below";
 				TargetAttributes = {
 					CB0EDA261C884A9600B2A871 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					CB0EDA3B1C88503500B2A871 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -141,20 +114,9 @@
 			projectRoot = "";
 			targets = (
 				CB0EDA261C884A9600B2A871 /* EnumTest */,
-				CB0EDA3B1C88503500B2A871 /* EnumTest_UnitTest */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		CB0EDA3A1C88503500B2A871 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB0EDA231C884A9600B2A871 /* Sources */ = {
@@ -162,13 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB0EDA2B1C884A9600B2A871 /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB0EDA381C88503500B2A871 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,28 +231,6 @@
 			};
 			name = Release;
 		};
-		CB0EDA421C88503500B2A871 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EnumTest_UnitTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vonbelow.EnumTest-UnitTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		CB0EDA431C88503500B2A871 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = EnumTest_UnitTest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vonbelow.EnumTest-UnitTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,14 +248,6 @@
 			buildConfigurations = (
 				CB0EDA2F1C884A9600B2A871 /* Debug */,
 				CB0EDA301C884A9600B2A871 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		CB0EDA411C88503500B2A871 /* Build configuration list for PBXNativeTarget "EnumTest_UnitTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB0EDA421C88503500B2A871 /* Debug */,
-				CB0EDA431C88503500B2A871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
