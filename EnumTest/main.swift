@@ -8,5 +8,25 @@
 
 import Foundation
 
-print("Hello, World!")
+public enum SwiftEnum : Int {
+    case foo
+    case bar
+}
 
+let foo = SwiftEnum(rawValue: 3)
+
+if foo == nil {
+    print ("✅ Swift Enum is nil")
+}
+else {
+    print ("❌ Swift Enum is not nil")
+}
+
+let bar = ObjcEnum(rawValue: 3)
+
+if bar == nil {
+    print ("✅ ObjC Enum is nil")
+}
+else {
+    print ("❌ ObjC Enum is not nil")
+}
