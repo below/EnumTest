@@ -1,6 +1,16 @@
 # EnumTest
 A simple project to illustrate a possible Swift bug in `rawValue` for enums.
 
+## Solved
+
+It is all intentional, and I see the point. It should be better documented
+https://github.com/apple/swift/blob/3ffbe020d76112c9a5f1bc05e64f272a9ba2ff6e/lib/ClangImporter/ImportDecl.cpp#L407
+
+```Swift
+// Unlike a standard init(rawValue:) enum initializer, this does a reinterpret
+// cast in order to preserve unknown or future cases from C.
+```
+
 ## Description
 The Swift documentation says:
 
