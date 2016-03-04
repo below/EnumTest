@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, ObjcEnum) {
-    foo,
-    bar
+typedef NS_ENUM(NSInteger, CEnum) {
+    Foo,
+    Bar
 };
