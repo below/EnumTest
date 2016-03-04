@@ -8,7 +8,7 @@ The behavior of `init?(rawValue:)` for `enum` types imported from (Objective-)C 
 
 The Swift language provides a lot of improvement over enums in (Objective-C). They are _first-class types in their own right_, whereas in C they are basically just an `Int` container with a few fancy labels.
 
-This leads to a problem that can easily be overlooked and is not obviously mentioned in the documentation. The documentation states that:
+This leads to a problems which can easily be overlooked and are not obviously mentioned in the documentation. The documentation states that:
 
 _If you define an enumeration with a raw-value type, the enumeration automatically receives an initializer that takes a value of the raw value’s type and returns either an enumeration case or nil._
 
@@ -54,7 +54,7 @@ This means, that for enums imported this way, `rawValue` will *not* return nil i
 
 ## Issue Two: Exhaustiveness
 
-Swift's `switch` statement demands to be exhaustive, that is you must cover every possible case, or insert a `default:` clause. What about our `CEnum`?
+Swift's `switch` statement demands to be exhaustive, that is you must cover every possible case, or insert a `default:` clause. The idea is to make sure that enumeration cases are not accidentally omitted. So what about our `CEnum`?
 
 ```Swift
 if let e = CEnum(rawValue: 4) {
@@ -88,3 +88,5 @@ https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Pro
 _Swift imports any C enumeration marked with the NS_ENUM macro as a Swift enumeration with an Int raw value type_
 https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/InteractingWithCAPIs.html
 
+_[A] switch statement must be exhaustive when considering an enumeration’s cases. If the case for .West is omitted, this code does not compile, because it does not consider the complete list of CompassPoint cases. Requiring exhaustiveness ensures that enumeration cases are not accidentally omitted._
+https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Enumerations.html
