@@ -4,6 +4,10 @@
 
 The behavior of `init?(rawValue:)` for `enum` types imported from (Objective-)C is not well documented and can lead to confusion or errors in code
 
+## Update
+
+Swift 5.0 solves this issue with the `@unknown default` case
+
 ## Introduction
 
 The Swift language provides a lot of improvement over enums in (Objective-)C. They are _first-class types in their own right_, whereas in C they are basically just an `Int` container with a few fancy labels.

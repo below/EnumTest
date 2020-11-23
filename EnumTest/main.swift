@@ -15,7 +15,7 @@ public enum SwiftEnum : Int {
     case Bar
 }
 
-func faz (x : CEnum) {
+func faz (_ x : CEnum) {
     switch x {
     case .Foo:
         print ("We have Foo")
@@ -35,13 +35,13 @@ else {
     print ("❌ Swift Enum is not nil")
 }
 
-let bar = CEnum(rawValue: 4)
-
-if bar == nil {
-    print ("✅ C Enum is nil")
+if let bar = CEnum(rawValue: 4) {
+    switch bar {
+        case .Foo:
+            print ("We have Foo")
+        case .Bar:
+            print ("We have Bar")
+    @unknown default:
+        print ("C Enum is a differnet value: \(bar.rawValue)")
+    }
 }
-else {
-    print ("❌ C Enum is not nil, but \(bar!.rawValue)")
-    faz (bar!)
-}
-
